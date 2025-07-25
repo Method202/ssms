@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Station | SSMS</title>
+    <link rel="stylesheet" href="station.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Connect to Station</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <nav class="station-nav">
+            <ul>
+                <li><a href="station.html"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="register.html"><i class="fas fa-plus-circle"></i> Register</a></li>
+                <li><a href="manage.html"><i class="fas fa-tasks"></i> Manage</a></li>
+                <li><a href="view.html"><i class="fas fa-search"></i> View</a></li>
+                <li class="active"><a href="connect.html"><i class="fas fa-plug"></i> Connect</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="connection-container">
+                <div class="connection-controls">
+                    <div class="connection-form">
+                        <div class="form-group">
+                            <label for="stationSelect">Select Station</label>
+                            <select id="stationSelect">
+                                <option value="">-- Select a station to connect --</option>
+                                <option value="STN-001">STN-001 - Central Main Station</option>
+                                <option value="STN-002">STN-002 - North Regional Station</option>
+                                <option value="STN-003">STN-003 - Eastern Hub Station</option>
+                                <option value="STN-004">STN-004 - Western Outpost</option>
+                                <option value="STN-005">STN-005 - Southern Relay</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="connectionUrl">Or enter URL directly</label>
+                            <input type="url" id="connectionUrl" placeholder="https://station.example.com">
+                        </div>
+                        <button id="connectBtn" class="btn-primary">
+                            <i class="fas fa-plug"></i> Connect
+                        </button>
+                    </div>
+
+                    <div class="connection-status">
+                        <div class="status-card">
+                            <h3>Connection Status</h3>
+                            <div class="status-indicator disconnected">
+                                <i class="fas fa-unlink"></i>
+                                <span>Disconnected</span>
+                            </div>
+                            <div class="status-details">
+                                <div class="detail">
+                                    <span class="label">Selected Station:</span>
+                                    <span class="value">None</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Last Connection:</span>
+                                    <span class="value">Never</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Connection Time:</span>
+                                    <span class="value">0s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connection-viewer">
+                    <div class="viewer-placeholder">
+                        <i class="fas fa-satellite-dish"></i>
+                        <p>No station selected. Please select a station or enter a URL to connect.</p>
+                    </div>
+                    <!-- This would be replaced with the actual station interface when connected -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="station.js"></script>
+</body>
+
+</html>

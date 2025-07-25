@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Stations | SSMS</title>
+    <link rel="stylesheet" href="station.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>View Stations</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <nav class="station-nav">
+            <ul>
+                <li><a href="station.html"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="register.html"><i class="fas fa-plus-circle"></i> Register</a></li>
+                <li><a href="manage.html"><i class="fas fa-tasks"></i> Manage</a></li>
+                <li class="active"><a href="view.html"><i class="fas fa-search"></i> View</a></li>
+                <li><a href="connect.html"><i class="fas fa-plug"></i> Connect</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="search-filters">
+                <div class="search-box large">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search stations by name, ID, region, or any parameter...">
+                    <button class="btn-primary">Search</button>
+                </div>
+
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>Filter by:</label>
+                        <select>
+                            <option>All Regions</option>
+                            <option>Central Region</option>
+                            <option>Northern Region</option>
+                            <option>Eastern Region</option>
+                            <option>Western Region</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select>
+                            <option>All Types</option>
+                            <option>Primary</option>
+                            <option>Secondary</option>
+                            <option>Tertiary</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select>
+                            <option>All Statuses</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                            <option>Maintenance</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="station-cards">
+                <div class="station-card">
+                    <div class="station-header">
+                        <h3>Central Main Station</h3>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="station-details">
+                        <div class="detail">
+                            <span class="label">ID:</span>
+                            <span class="value">STN-001</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Type:</span>
+                            <span class="value">Primary</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Location:</span>
+                            <span class="value">Central Region, Capital District</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">URL:</span>
+                            <span class="value"><a href="#">https://central.example.com</a></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Last Updated:</span>
+                            <span class="value">2023-06-15 14:30</span>
+                        </div>
+                    </div>
+                    <div class="station-actions">
+                        <button class="btn-small primary">View Details</button>
+                        <button class="btn-small secondary">Connect</button>
+                    </div>
+                </div>
+
+                <div class="station-card">
+                    <div class="station-header">
+                        <h3>North Regional Station</h3>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="station-details">
+                        <div class="detail">
+                            <span class="label">ID:</span>
+                            <span class="value">STN-002</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Type:</span>
+                            <span class="value">Secondary</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Location:</span>
+                            <span class="value">Northern Region, North District</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">URL:</span>
+                            <span class="value"><a href="#">https://north.example.com</a></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Last Updated:</span>
+                            <span class="value">2023-06-14 09:15</span>
+                        </div>
+                    </div>
+                    <div class="station-actions">
+                        <button class="btn-small primary">View Details</button>
+                        <button class="btn-small secondary">Connect</button>
+                    </div>
+                </div>
+
+                <div class="station-card">
+                    <div class="station-header">
+                        <h3>Eastern Hub Station</h3>
+                        <span class="status warning">Maintenance</span>
+                    </div>
+                    <div class="station-details">
+                        <div class="detail">
+                            <span class="label">ID:</span>
+                            <span class="value">STN-003</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Type:</span>
+                            <span class="value">Secondary</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Location:</span>
+                            <span class="value">Eastern Region, East District</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">URL:</span>
+                            <span class="value"><a href="#">https://east.example.com</a></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Last Updated:</span>
+                            <span class="value">2023-06-13 16:45</span>
+                        </div>
+                    </div>
+                    <div class="station-actions">
+                        <button class="btn-small primary">View Details</button>
+                        <button class="btn-small secondary">Connect</button>
+                    </div>
+                </div>
+
+                <div class="station-card">
+                    <div class="station-header">
+                        <h3>Western Outpost</h3>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="station-details">
+                        <div class="detail">
+                            <span class="label">ID:</span>
+                            <span class="value">STN-004</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Type:</span>
+                            <span class="value">Tertiary</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Location:</span>
+                            <span class="value">Western Region, West District</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">URL:</span>
+                            <span class="value"><a href="#">https://west.example.com</a></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Last Updated:</span>
+                            <span class="value">2023-06-12 11:20</span>
+                        </div>
+                    </div>
+                    <div class="station-actions">
+                        <button class="btn-small primary">View Details</button>
+                        <button class="btn-small secondary">Connect</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="btn-pagination"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn-pagination active">1</button>
+                <button class="btn-pagination">2</button>
+                <button class="btn-pagination">3</button>
+                <button class="btn-pagination"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="station.js"></script>
+</body>
+
+</html>

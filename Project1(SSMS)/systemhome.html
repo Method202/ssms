@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Home | SSMS</title>
+    <link rel="stylesheet" href="systemhome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-broadcast-tower"></i> Stations Support and Management System</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span id="username-display">Administrator</span>
+                <button class="btn-logout" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </header>
+
+        <div class="welcome-section">
+            <div class="welcome-card">
+                <div class="welcome-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="welcome-message">
+                    <h2>Welcome back, <span id="greeting-name">Administrator</span>!</h2>
+                    <p>You have successfully logged in to the Stations Support and Management System.</p>
+                    <p class="login-time">Last login: <span id="last-login">Just now</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-navigation">
+            <div class="nav-card" id="dashboard-card">
+                <div class="nav-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="nav-info">
+                    <h3>Dashboard</h3>
+                    <p>View system overview and key metrics</p>
+                    <a href="dashboard.html" class="btn-nav">Go to Dashboard</a>
+                </div>
+            </div>
+
+            <div class="nav-card" id="station-card">
+                <div class="nav-icon">
+                    <i class="fas fa-broadcast-tower"></i>
+                </div>
+                <div class="nav-info">
+                    <h3>Stations</h3>
+                    <p>Manage all broadcasting stations</p>
+                    <a href="station.html" class="btn-nav">Manage Stations</a>
+                </div>
+            </div>
+
+            <div class="nav-card" id="data-card">
+                <div class="nav-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="nav-info">
+                    <h3>Data Setup</h3>
+                    <p>Configure regions, districts and groups</p>
+                    <a href="datasetup.html" class="btn-nav">Configure Data</a>
+                </div>
+            </div>
+
+            <div class="nav-card" id="users-card">
+                <div class="nav-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="nav-info">
+                    <h3>Users</h3>
+                    <p>Manage system users and permissions</p>
+                    <a href="users.html" class="btn-nav">Manage Users</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+            <div class="action-buttons">
+                <button class="btn-action" id="add-station-btn">
+                    <i class="fas fa-plus-circle"></i> Add New Station
+                </button>
+                <button class="btn-action" id="view-reports-btn">
+                    <i class="fas fa-chart-bar"></i> View Reports
+                </button>
+                <button class="btn-action" id="system-settings-btn">
+                    <i class="fas fa-cog"></i> System Settings
+                </button>
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h2><i class="fas fa-history"></i> Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>System updated to version 2.3.1</p>
+                        <span class="activity-time">Today, 09:30 AM</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>Station "Central Broadcast" requires maintenance</p>
+                        <span class="activity-time">Yesterday, 4:15 PM</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>New user "johndoe" registered</p>
+                        <span class="activity-time">Yesterday, 11:20 AM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="systemhome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Stations | SSMS</title>
+    <link rel="stylesheet" href="station.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Manage Stations</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <nav class="station-nav">
+            <ul>
+                <li><a href="station.html"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="register.html"><i class="fas fa-plus-circle"></i> Register</a></li>
+                <li class="active"><a href="manage.html"><i class="fas fa-tasks"></i> Manage</a></li>
+                <li><a href="view.html"><i class="fas fa-search"></i> View</a></li>
+                <li><a href="connect.html"><i class="fas fa-plug"></i> Connect</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="table-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search stations...">
+                </div>
+                <div class="view-options">
+                    <span>View:</span>
+                    <select>
+                        <option>10 per page</option>
+                        <option>25 per page</option>
+                        <option>50 per page</option>
+                        <option>All stations</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="stations-table">
+                    <thead>
+                        <tr>
+                            <th>Station ID</th>
+                            <th>Station Name</th>
+                            <th>Type</th>
+                            <th>Region</th>
+                            <th>District</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>STN-001</td>
+                            <td>Mbeya Station</td>
+                            <td>Primary</td>
+                            <td>Central</td>
+                            <td>Capital</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STN-002</td>
+                            <td>Songwe Regional Station</td>
+                            <td>Secondary</td>
+                            <td>Northern</td>
+                            <td>North</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STN-003</td>
+                            <td>Dodoma Hub Station</td>
+                            <td>Secondary</td>
+                            <td>Eastern</td>
+                            <td>East</td>
+                            <td><span class="status warning">Maintenance</span></td>
+                            <td>
+                                <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STN-004</td>
+                            <td>Western Outpost</td>
+                            <td>Tertiary</td>
+                            <td>Western</td>
+                            <td>West</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STN-005</td>
+                            <td>Southern Relay</td>
+                            <td>Tertiary</td>
+                            <td>Southern</td>
+                            <td>South</td>
+                            <td><span class="status inactive">Inactive</span></td>
+                            <td>
+                                <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="btn-pagination"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn-pagination active">1</button>
+                <button class="btn-pagination">2</button>
+                <button class="btn-pagination">3</button>
+                <button class="btn-pagination"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="station.js"></script>
+</body>
+
+</html>

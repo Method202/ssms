@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Station | SSMS</title>
+    <link rel="stylesheet" href="station.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Register New Station</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <nav class="station-nav">
+            <ul>
+                <li><a href="station.html"><i class="fas fa-home"></i> Overview</a></li>
+                <li class="active"><a href="register.html"><i class="fas fa-plus-circle"></i> Register</a></li>
+                <li><a href="manage.html"><i class="fas fa-tasks"></i> Manage</a></li>
+                <li><a href="view.html"><i class="fas fa-search"></i> View</a></li>
+                <li><a href="connect.html"><i class="fas fa-plug"></i> Connect</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="form-card">
+                <h2><i class="fas fa-plus-circle"></i> Station Registration Form</h2>
+                <form id="stationForm">
+                    <div class="form-group">
+                        <label for="stationName">Station Name</label>
+                        <input type="text" id="stationName" placeholder="Enter station name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="stationId">Station ID</label>
+                            <input type="text" id="stationId" placeholder="Enter unique ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stationType">Station Type</label>
+                            <select id="stationType" required>
+                                <option value="">Select type</option>
+                                <option value="primary">Primary</option>
+                                <option value="secondary">Secondary</option>
+                                <option value="tertiary">Tertiary</option>
+                                <option value="special">Special</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="region">Region</label>
+                            <select id="region" required>
+                                <option value="">Select region</option>
+                                <option value="central">Central</option>
+                                <option value="northern">Northern</option>
+                                <option value="eastern">Eastern</option>
+                                <option value="western">Western</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">District</label>
+                            <select id="district" required>
+                                <option value="">Select district</option>
+                                <option value="capital">Capital</option>
+                                <option value="north">North</option>
+                                <option value="south">South</option>
+                                <option value="east">East</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stationUrl">Station URL</label>
+                        <input type="url" id="stationUrl" placeholder="https://station.example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stationDescription">Description</label>
+                        <textarea id="stationDescription" rows="3"
+                            placeholder="Brief description of the station"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Register Station</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="station.js"></script>
+</body>
+
+</html>

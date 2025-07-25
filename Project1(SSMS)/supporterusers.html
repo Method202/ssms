@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management | SSMS</title>
+    <link rel="stylesheet" href="users.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-users"></i> Users Management</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <div class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-user-cog"></i> Manage System Users</h2>
+                <button class="btn-primary" id="add-user-btn"><i class="fas fa-plus"></i> Add User</button>
+            </div>
+
+            <div class="data-management">
+                <div class="data-form" id="user-form-container" style="display: none;">
+                    <h3><span id="user-form-title">Add New</span> User</h3>
+                    <form id="user-form">
+                        <input type="hidden" id="user-id">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="user-firstname">First Name</label>
+                                <input type="text" id="user-firstname" placeholder="Enter first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-lastname">Last Name</label>
+                                <input type="text" id="user-lastname" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-email">Email Address</label>
+                            <input type="email" id="user-email" placeholder="Enter email address" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="user-username">Username</label>
+                                <input type="text" id="user-username" placeholder="Choose username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-password">Password</label>
+                                <input type="password" id="user-password" placeholder="Set password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-role">User Role</label>
+                            <select id="user-role" required>
+                                <option value="">Select Role</option>
+                                <option value="administrator">Administrator</option>
+                                <option value="supporter">Supporter</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="region-access-container" style="display: none;">
+                            <label for="user-regions">Region Access</label>
+                            <select id="user-regions" multiple>
+                                <option value="1">Central Region</option>
+                                <option value="2">Northern Region</option>
+                                <option value="3">Eastern Region</option>
+                                <option value="4">Western Region</option>
+                                <option value="5">Southern Region</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-status">Status</label>
+                            <select id="user-status">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="pending">Pending Activation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Save User</button>
+                            <button type="button" class="btn-secondary" id="cancel-user">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="data-table-container">
+                    <div class="table-controls">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search users..." id="user-search">
+                        </div>
+                        <div class="table-actions">
+                            <select id="user-role-filter">
+                                <option value="">All Roles</option>
+                                <option value="administrator">Administrators</option>
+                                <option value="supporter">Supporters</option>
+                            </select>
+                            <select id="user-status-filter">
+                                <option value="">All Statuses</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="pending">Pending</option>
+                            </select>
+                            <button class="btn-secondary"><i class="fas fa-download"></i> Export</button>
+                        </div>
+                    </div>
+
+                    <table id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+
+                    <div class="table-pagination">
+                        <button class="btn-secondary" id="prev-page"><i class="fas fa-chevron-left"></i>
+                            Previous</button>
+                        <span id="page-indicator">Page 1 of 3</span>
+                        <button class="btn-secondary" id="next-page">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="users.js"></script>
+</body>
+
+</html>
